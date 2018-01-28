@@ -1,0 +1,53 @@
+2009-06-25  Frank Warmerdam  <warmerdam@pobox.com>
+
+	* jcmainct.c, jdmainct.c: Avoid using name main for variables as
+	it triggers warnings on some compilers. 
+
+2009-06-23  Frank Warmerdam  <warmerdam@pobox.com>
+
+	* jchuff.c, jdhuff.c: ensure data consumed is reflected in the source
+	structure before io calls.  
+	http://sourceforge.net/support/tracker.php?aid=2811021
+
+	* jchuff.h, jdct.h, jdhuff.h, jmemsys.h, jpegint.h, jpeglib.h: Added
+	#ifdef's to rename public API to _12 version if NEED_12_BIT_NAMES is
+	defined.
+    	http://sourceforge.net/support/tracker.php?aid=2809983
+
+	* jcparam.c: add 12bit default huffman tables.
+	http://sourceforge.net/support/tracker.php?aid=2809979
+
+2009-06-21  Frank Warmerdam  <warmerdam@pobox.com>
+
+	* rdppm.c, wrppm.c: Fix byte order for 16bit pnm. Should be bigendian.
+	http://sourceforge.net/support/tracker.php?aid=2809967
+
+2006-02-25  Paul van den Berg  <paulberg@wanadoo.nl>
+
+	* created branch jpeg6b_vollbeding
+
+	* added jpegclub.org/jpegexiforient.c and a modified 
+	version of jpegclub.org/exifautotran.txt as exifautotran.sh
+
+	* applied changes to jpeg6b_original
+
+	* removed changed testimages
+
+	* replaced jaricom.c, jcarith.c, and jdarith.c with dummies 
+	from sylvana.net/jpeg-ari/jpeg-ari-28mar98.tar.gz
+
+	* removed dos-isms, Makefile and jconfig.h
+
+	* Got latest source from jpegclub.org/libjpeg-6c.tar.gz
+	
+
+2006-02-15  Frank Warmerdam  <warmerdam@pobox.com>
+
+	* Introduced ChangeLog file.
+
+	* modified nominal version to be 6.1.0 instead of 6b.
+
+	* Applied all Bob Friesenhahn's autoconf/automake/libtool changes.
+
+	* Committed jpeb6b from the ijg download site as the baseline.  Tagged
+	it as jpeg6b_original.
